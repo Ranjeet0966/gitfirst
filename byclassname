@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cl {
+            font-weight: bold;
+        }
+        
+        li:nth-child(3) {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="cl">list1</li>
+        <li class="cl">list2</li>
+        <li class="cl">list3</li>
+        <li id="first">list4</li>
+    </ul>
+    <script>
+        let elm=document.getElementsByClassName("cl");
+        for(let i=0;i<elm.length;i++)
+        {
+            elm[i].innerHTML="Welcome";
+        }
+
+    </script>
+</body>
+</html>
