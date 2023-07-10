@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cl {
+            font-weight: bold;
+        }
+        
+        li:nth-child(3) {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="cl">list1</li>
+        <li class="cl">list2</li>
+        <li class="cl">list3</li>
+        <li id="first">list4</li>
+        <li>New List Item</li>
+    </ul>
+    <script>
+        let elm = document.createElement("li");
+        elm.textContent = "New List Item";
+        document.getElementsByTagName("ul")[0].appendChild(elm);
+        
+    let elementsByClassName = document.getElementsByClassName("cl");
+    let elementsByTagName = document.getElementsByTagName("li");
+
+    // Editing using getElementsByClassName
+    for (let i = 0; i < elementsByClassName.length; i++) {
+        elementsByClassName[i].innerHTML = "Welcome";
+    }
+
+    // Editing using getElementsByTagName
+    for (let i = 0; i < elementsByTagName.length; i++) {
+        if (!elementsByTagName[i].classList.contains("cl")) {
+            elementsByTagName[i].innerHTML = "To India";
+        }
+    }
+</script>
+
+    </script>
+</body>
+</html>
